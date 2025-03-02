@@ -5,7 +5,7 @@ export interface SidebarButtonProps {
     title: String;
 }
 
-export default function SidebarButton  ({ icon, title }: SidebarButtonProps)  {
+export default function SidebarButton({ icon, title }: SidebarButtonProps) {
     return (
         <div className="h-[55px] w-[335px] flex align-middle gap-2 pl-6 items-center  bg-customDark-300 hover:bg-hoverdark hover:text-white cursor-pointer">
             <div>{icon}</div>
@@ -15,5 +15,4 @@ export default function SidebarButton  ({ icon, title }: SidebarButtonProps)  {
             </div>
         </div>
     );
-};
-
+}
