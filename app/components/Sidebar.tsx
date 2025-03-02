@@ -12,10 +12,14 @@ interface SidebarProps{
 
 export default function Sidebar ({ categories, walletItems, folders, tools }:SidebarProps) {
   return (
-    <div className='h-screen w-[335px] bg-customDark-200 text-gray-200 flex flex-col '>
+    <div className='h-screen w-[335px] bg-customDark-300 text-gray-200 flex flex-col '>
 
       <div className='mt-8'>
       <SidebarButton title={"Get Started"} icon={<RocketIcon/>}/>
+      </div>
+
+      <div className=' flex items-center '>
+
       </div>
 
       <div>
@@ -48,7 +52,7 @@ export default function Sidebar ({ categories, walletItems, folders, tools }:Sid
         ))}
       </div>
 
-      <div className='sticky bottom-0 bg-customDark-200 border-t-2 border-white'>
+      <div className='sticky bottom-0 bg-customDark-300 border-t-2 border-white'>
         <div className='mt-6'>
           <div className='flex justify-between'>
           <h2 className="font-bold font-sans mb-4 text-xs leading-4 ml-6 text-textgray-100 tracking-[0.1rem]">TOOLS</h2>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { IconProp } from '../types/icon'
+
 
 const AddFolderIcon = () => {
   return (
