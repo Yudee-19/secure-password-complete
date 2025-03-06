@@ -46,7 +46,6 @@ interface AddItmesDropdownProps {
 
 const AddItemsDropdown: React.FC<AddItmesDropdownProps> = ({
     isOpen,
-    onClose,
 }: AddItmesDropdownProps) => {
     return (
         isOpen && (
