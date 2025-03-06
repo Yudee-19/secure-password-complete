@@ -10,7 +10,6 @@ import CryptoIcon from "../icons/CryptoIcon";
 import AddFolderIcon from "../icons/AddFolderIcon";
 import PasswordGeneratorIcon from "../icons/PasswordGeneratorIcon";
 import PasswordHealthIcon from "../icons/PasswordHealthIcon";
-import { useRouter } from "next/navigation";
 export const categories = [
     { icon: <AllItemsIcon />, title: "All Items", path: "/vault" },
     { icon: <LockIcon />, title: "Passwords", path: "/passwords" },

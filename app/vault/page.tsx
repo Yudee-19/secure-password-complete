@@ -9,7 +9,7 @@ const Page = () => {
     const [isDropDownOpen, setisDropDownOpen] = useState(false);
 
     // Toggle dropdown visibility
-    const toggleDropDown = (e: any) => {
+    const toggleDropDown = (e: Event) => {
         e.stopPropagation(); // Stop event propagation to prevent immediate closing
         setisDropDownOpen((prevState) => !prevState);
     };
@@ -30,7 +30,12 @@ const Page = () => {
             </div>
             <div className="flex justify-center items-center gap-4 relative">
                 {" "}
-                <div className="flex justify-center" onClick={toggleDropDown}>
+                <div
+                    className="flex justify-center"
+                    onClick={(e) => {
+                        toggleDropDown;
+                    }}
+                >
                     <PrimaryButton
                         text="Add Passwords"
                         height="40"

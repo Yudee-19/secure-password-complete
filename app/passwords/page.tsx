@@ -3,15 +3,7 @@ import Squircle from "../icons/Squircle";
 import Lock2 from "../icons/Lock2";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
 
-const storedPasswords = [
-    {
-        id: 1,
-        platform: "Netflix",
-        lastused: 1,
-    },
-];
-
-const page = () => {
+const Page = () => {
     return (
         <div className="w-full h-full pl-[335px] pt-[82px] bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
             <Squircle insideIcon={<Lock2 />} />
@@ -42,4 +34,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

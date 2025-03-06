@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import GetStartedItem from "../components/GetStartedItem";
 import AddPasswordIcon from "../icons/AddPasswordIcon";
@@ -7,7 +7,7 @@ import MfaIcon from "../icons/MfaIcon";
 import PuzzleIcon from "../icons/PuzzleIcon";
 import ShieldIcon from "../icons/ShieldIcon";
 
-const page = () => {
+const Page = () => {
     const [steps, setSteps] = useState([
         { id: 1, completed: false },
         { id: 2, completed: false },
@@ -86,4 +86,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

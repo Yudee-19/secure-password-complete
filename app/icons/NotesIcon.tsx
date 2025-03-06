@@ -1,5 +1,3 @@
-import { IconProp } from "../types/icon";
-
 export default function NotesIcon() {
     return (
         <svg

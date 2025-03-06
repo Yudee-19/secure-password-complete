@@ -2,7 +2,7 @@ import React from "react";
 
 export interface SidebarButtonProps {
     icon: React.ReactNode;
-    title: String;
+    title: string;
     path?: string;
 }
 
