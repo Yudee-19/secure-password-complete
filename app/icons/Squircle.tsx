@@ -5,7 +5,7 @@ interface SquircleProp {
     insideIcon?: React.ReactNode;
 }
 
-const Squircle = ({ color, insideIcon }: SquircleProp) => {
+const Squircle = ({ insideIcon }: SquircleProp) => {
     return (
         <svg
             width="98"
