@@ -1,22 +1,48 @@
-import React from 'react'
+import React from "react";
 
-interface SquircleProp{
-  color:string
-  insideIcon:React.ReactNode
+interface SquircleProp {
+    color?: string;
+    insideIcon?: React.ReactNode;
 }
 
-const Squircle = ({color,insideIcon}:SquircleProp) => {
-  return (
-    <svg overflow="visible" width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 30.316C0 5.35077 5.35077 0 30.316 0H34.684C59.6492 0 65 5.35077 65 30.316V34.684C65 59.6492 59.6492 65 34.684 65H30.316C5.35077 65 0 59.6492 0 34.684V30.316Z" fill={color} />
-<g transform="translate(20, 20)">
-        <foreignObject width="25" height="25" z="2"  >
-          {insideIcon} 
-        </foreignObject>
-      </g>
-</svg>
+const Squircle = ({ color, insideIcon }: SquircleProp) => {
+    return (
+        <svg
+            width="98"
+            height="100"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M0 46.64C0 8.23196 8.23196 0 46.64 0H53.36C91.768 0 100 8.23196 100 46.64V53.36C100 91.768 91.768 100 53.36 100H46.64C8.23196 100 0 91.768 0 53.36V46.64Z"
+                fill="url(#paint0_radial_1_6908)"
+            />
+            <defs>
+                <radialGradient
+                    id="paint0_radial_1_6908"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(11 -7.99999) rotate(51.6112) scale(132.046)"
+                >
+                    <stop stopColor="#066431" />
+                    <stop
+                        offset="0.701411"
+                        stopColor="#21B364"
+                        stopOpacity="0.8"
+                    />
+                    <stop offset="1" stopColor="#08291A" />
+                </radialGradient>
+            </defs>
+            <g transform="translate(29, 29)">
+                <foreignObject width="40" height="40">
+                    {insideIcon}
+                </foreignObject>
+            </g>
+        </svg>
+    );
+};
 
-  )
-}
-
-export default Squircle
+export default Squircle;

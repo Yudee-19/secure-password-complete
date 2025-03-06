@@ -35,22 +35,22 @@ const GetStartedItem = ({
                 className=" cursor-pointer  pl-[15px] h-[24px] w-[144px]  flex gap-2 justify-between items-center  "
                 onClick={onclick}
             >
-                <p
+                <div
                     className={`h-6 w-[112px] text-[16px] font-normal leading-6 tracking-tight ${
                         completed ? "text-[#2ED370]" : "text-white"
                     }`}
                 >
                     {completed ? (
-                        <span className=" pl-5 flex items-center gap-1">
-                            <p className="w-[40px] h-[24px] font-inter font-normal text-[16px] leading-[24px] tracking-[-0.5%]">
+                        <div className=" pl-5 flex items-center gap-1">
+                            <span className="w-[40px] h-[24px] font-inter font-normal text-[16px] leading-[24px] tracking-[-0.5%]">
                                 Done
-                            </p>
+                            </span>
                             <GreenTickIcon />
-                        </span>
+                        </div>
                     ) : (
                         `Takes ${completionTime}`
                     )}
-                </p>
+                </div>
 
                 {!completed && (
                     <div className=" h-6 w-6 -rotate-90 flex justify-center pr-1 cursor-pointer ">

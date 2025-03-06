@@ -19,8 +19,13 @@ export default function Sidebar({
     tools,
 }: SidebarProps) {
     const router = useRouter();
+    const handleNavigation = (path: string | undefined) => {
+        if (path) {
+            router.push(path);
+        }
+    };
     return (
-        <div className="h-screen w-[335px] bg-customDark-300 text-gray-200 flex flex-col ">
+        <div className="h-screen w-[335px] bg-customDark-300 fixed flex flex-col top-[82px] left-0 overflow-scroll text-gray-200  ">
             <div
                 className="mt-8"
                 onClick={() => {
@@ -39,11 +44,12 @@ export default function Sidebar({
                     </h2>
                 </div>
                 {categories.map((item, index) => (
-                    <SidebarButton
+                    <div
                         key={index}
-                        icon={item.icon}
-                        title={item.title}
-                    />
+                        onClick={() => handleNavigation(item.path)}
+                    >
+                        <SidebarButton icon={item.icon} title={item.title} />
+                    </div>
                 ))}
             </div>
 
@@ -79,7 +85,7 @@ export default function Sidebar({
                 ))}
             </div>
 
-            <div className="sticky bottom-0 bg-customDark-300 border-t-2 border-white">
+            <div className=" sticky pb-23 bottom-0 bg-customDark-300 border-t-2 border-white">
                 <div className="mt-6">
                     <div className="flex justify-between">
                         <h2 className="font-bold font-sans mb-4 text-xs leading-4 ml-6 text-textgray-100 tracking-[0.1rem]">

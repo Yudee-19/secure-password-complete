@@ -10,27 +10,25 @@ import CryptoIcon from "../icons/CryptoIcon";
 import AddFolderIcon from "../icons/AddFolderIcon";
 import PasswordGeneratorIcon from "../icons/PasswordGeneratorIcon";
 import PasswordHealthIcon from "../icons/PasswordHealthIcon";
-
+import { useRouter } from "next/navigation";
 export const categories = [
-  { icon: <AllItemsIcon /> , title: "All Items" },
-  { icon: <LockIcon /> , title: "Passwords" },
-  { icon: <NotesIcon /> , title: "Notes" },
-  { icon: <PersonalInfoIcon /> , title: "Personal Info" },
-  { icon: <SharingCenterIcon /> , title: "Sharing Center" },
-  { icon: <TrashIcon /> , title: "Trash" },
+    { icon: <AllItemsIcon />, title: "All Items", path: "/vault" },
+    { icon: <LockIcon />, title: "Passwords", path: "/passwords" },
+    { icon: <NotesIcon />, title: "Notes", path: "/notes" },
+    { icon: <PersonalInfoIcon />, title: "Personal Info" },
+    { icon: <SharingCenterIcon />, title: "Sharing Center" },
+    { icon: <TrashIcon />, title: "Trash" },
 ];
 
 export const walletItems = [
-  { icon: <CredirCardIcon />, title: "Credit Card" },
-  { icon: <BankIcon />, title: "Bank Account" },
-  { icon: <CryptoIcon />, title: "Crypto Account" },
+    { icon: <CredirCardIcon />, title: "Credit Card" },
+    { icon: <BankIcon />, title: "Bank Account" },
+    { icon: <CryptoIcon />, title: "Crypto Account" },
 ];
 
-export const folders = [
-  { icon: <AddFolderIcon />, title: "Add new folder" },
-];
+export const folders = [{ icon: <AddFolderIcon />, title: "Add new folder" }];
 
 export const tools = [
-  { icon: <PasswordGeneratorIcon />, title: "Password Generator" },
-  { icon: <PasswordHealthIcon />, title: "Password Health" },
+    { icon: <PasswordGeneratorIcon />, title: "Password Generator" },
+    { icon: <PasswordHealthIcon />, title: "Password Health" },
 ];
