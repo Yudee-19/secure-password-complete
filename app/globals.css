@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -11,10 +12,13 @@
     --color-customDark-300: #151515;
     --color-customDark-400: #131212;
     --color-hoverdark: #494949;
+    --color-hoverdark-2: #3a3a3a;
     --color-textgray-100: #666666;
     --color-textgray-200: #a0a0a0;
     --color-customgreen: #2dd171;
     --color-customorange: #f8af3f;
+    --font-Inter: "Inter", sans-serif;
+    --font-inter: "Inter", sans-serif;
 }
 
 :root {

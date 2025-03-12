@@ -20,8 +20,8 @@ const Page = () => {
     };
 
     return (
-        <div className="w-screen h-screen pl-[335px] pt-[82px] bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
-            <Squircle insideIcon={<BrokenLock />} />
+        <div className="w-screen h-screen pl-[335px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
+            <Squircle height="100" width="98" insideIcon={<BrokenLock />} />
             <div className="w-[194px] h-[29px] font-inter font-bold text-[24px] leading-[29.05px] tracking-normal text-customWhite">
                 Let&apos;s Get Started
             </div>
@@ -36,11 +36,7 @@ const Page = () => {
                         toggleDropDown(e);
                     }}
                 >
-                    <PrimaryButton
-                        text="Add Passwords"
-                        height="40"
-                        width="180"
-                    />
+                    <PrimaryButton text="Add Items" height="40" width="154" />
                 </div>
                 {/* Dropdown positioned relative to the button */}
                 {isDropDownOpen && (
@@ -55,9 +51,9 @@ const Page = () => {
                 )}
                 <div className="flex justify-center">
                     <SecondaryButton
-                        text="Import Passwords"
+                        text="Import Data"
                         height="40"
-                        width="180"
+                        width="154"
                     />
                 </div>
             </div>

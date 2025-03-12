@@ -15,7 +15,7 @@ const dropDownItem = [
     {
         id: 2,
         title: "Notes",
-        icon: <NotesIcon />,
+        icon: <NotesIcon height="24px" width="24px" color="#a0a0a0" />,
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ const dropDownItem = [
     {
         id: 6,
         title: "Crypto",
-        icon: <CryptoIcon />,
+        icon: <CryptoIcon height="24px" width="24px" color="#a0a0a0" />,
     },
 ];
 

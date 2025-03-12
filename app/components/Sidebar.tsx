@@ -61,11 +61,12 @@ export default function Sidebar({
                 </div>
 
                 {walletItems.map((item, index) => (
-                    <SidebarButton
+                    <div
                         key={index}
-                        icon={item.icon}
-                        title={item.title}
-                    />
+                        onClick={() => handleNavigation(item.path)}
+                    >
+                        <SidebarButton icon={item.icon} title={item.title} />
+                    </div>
                 ))}
             </div>
 
@@ -77,11 +78,12 @@ export default function Sidebar({
                 </div>
 
                 {folders.map((item, index) => (
-                    <SidebarButton
+                    <div
                         key={index}
-                        icon={item.icon}
-                        title={item.title}
-                    />
+                        onClick={() => handleNavigation(item.path)}
+                    >
+                        <SidebarButton icon={item.icon} title={item.title} />
+                    </div>
                 ))}
             </div>
 
@@ -96,11 +98,15 @@ export default function Sidebar({
                         </div>
                     </div>
                     {tools.map((item, index) => (
-                        <SidebarButton
+                        <div
                             key={index}
-                            icon={item.icon}
-                            title={item.title}
-                        />
+                            onClick={() => handleNavigation(item.path)}
+                        >
+                            <SidebarButton
+                                icon={item.icon}
+                                title={item.title}
+                            />
+                        </div>
                     ))}
                 </div>
             </div>

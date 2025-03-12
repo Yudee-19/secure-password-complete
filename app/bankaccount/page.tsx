@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Squircle from "../icons/Squircle";
-import Lock2 from "../icons/Lock2";
 import { PrimaryButton, SecondaryButton } from "../components/Buttons";
-import AddPasswordSidebar from "../components/AddPasswordSidebar";
+import AddBankAccountSidebar from "../components/AddBankAccountSidebar";
+import GreenBankIcon from "../icons/GreenBankIcon";
 
 const Page = () => {
     const [isSidebarModalOpen, setisSidebarModalOpen] = useState(false);
@@ -15,31 +15,32 @@ const Page = () => {
     };
     return (
         <div className="w-full h-full pl-[335px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
-            <Squircle height="100" width="98" insideIcon={<Lock2 />} />
-            <div className="w-[313px] h-[29px] font-inter font-bold text-[24px] leading-[29.05px] tracking-normal text-customWhite">
-                Goodbye Password Resets
+            <Squircle
+                color="#244A33"
+                height="100"
+                width="98"
+                insideIcon={
+                    <GreenBankIcon color="#9FEBBD" height="39" width="37" />
+                }
+            />
+            <div className=" h-[29px] font-inter font-bold text-[24px] leading-[29.05px] tracking-normal text-customWhite">
+                Fill forms online stress-free
             </div>
             <div className="w-[307px] h-[48px] font-inter font-medium text-[16px] leading-[24px] tracking-[-0.5%] text-center text-textgray-200">
-                Add your passwords. You will find it here whenever you need it
+                Jot down a Wi-Fi code, office security alarm code or your
+                friend’s birthday
             </div>
             <div className="flex justify-center items-center gap-4 relative">
                 {" "}
                 <div className="flex justify-center" onClick={openSidebarModal}>
                     <PrimaryButton
-                        text="Add Passwords"
+                        text="Add Personal Info"
                         height="40"
-                        width="180"
-                    />
-                </div>
-                <div className="flex justify-center">
-                    <SecondaryButton
-                        text="Import Passwords"
-                        height="40"
-                        width="180"
+                        width="376"
                     />
                 </div>
             </div>
-            <AddPasswordSidebar
+            <AddBankAccountSidebar
                 isOpen={isSidebarModalOpen}
                 onClose={closeSidebarModal}
             />

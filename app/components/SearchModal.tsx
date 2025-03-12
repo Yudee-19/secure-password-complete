@@ -57,7 +57,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                             <span>Folders &gt; Zaplog</span>
                         </li>
                         <li className="cursor-pointer flex items-center gap-2 text-[#EDEDED] text-[16px] font-medium">
-                            <GreenBankIcon />
+                            <GreenBankIcon
+                                color="#2ED370"
+                                height="18"
+                                width="19"
+                            />
                             <span>Bank Account</span>
                         </li>
                     </ul>
@@ -74,7 +78,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                             <span>Passwords</span>
                         </li>
                         <li className=" cursor-pointer flex items-center gap-2 text-[#EDEDED] text-[16px] font-medium">
-                            <CryptoIcon />
+                            <CryptoIcon
+                                height="20px"
+                                width="20px"
+                                color="#a0a0a0"
+                            />
                             <span>Crypto Account</span>
                         </li>
                     </ul>
