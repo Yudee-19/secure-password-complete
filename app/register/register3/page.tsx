@@ -2,7 +2,6 @@
 import React from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
-import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../../components/Buttons";
 import OtpBox from "../../components/OtpBox";
 const Page = () => {

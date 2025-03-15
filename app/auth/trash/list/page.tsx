@@ -1,24 +1,12 @@
 "use client";
-import AddPasswordSidebar from "@/app/components/AddPasswordSidebar";
 import { RedSecondaryButton } from "@/app/components/Buttons";
 import DropDownIcon from "@/app/icons/DropDownIcon";
-import OptionsIcon from "@/app/icons/OptionsIcon";
-import PremiumIconGold from "@/app/icons/PremiumIconGold";
 import RestoreIcon from "@/app/icons/RestoreIcon";
-import ShareIcon from "@/app/icons/ShareIcon";
 import Squircle from "@/app/icons/Squircle";
 import TrashIcon from "@/app/icons/TrashIcon";
 import React, { useState } from "react";
 
 const Page = () => {
-    const [_isSidebarModalOpen, setisSidebarModalOpen] = useState(false);
-    const openSidebarModal = () => {
-        setisSidebarModalOpen(true);
-    };
-    const closeSidebarModal = () => {
-        setisSidebarModalOpen(false);
-    };
-
     const [isOptionsModalOpen, setisOptionsModalOpen] = useState(false);
     const openOptionsModal = () => {
         setisOptionsModalOpen(!isOptionsModalOpen);

@@ -111,47 +111,4 @@ const Page = () => {
     );
 };
 
-interface OptionsModalProp {
-    isOpen: boolean;
-    column: string;
-}
-const OptionsModal: React.FC<OptionsModalProp> = ({ isOpen, column }) => {
-    if (!isOpen) return null;
-    const positionClass = `${column} col-span-2`;
-    return (
-        <div
-            className={`w-[181px] h-[210px] ${positionClass}      bg-customDark-0 flex flex-col rounded-md`}
-        >
-            <div className="h-[45px] border-b-[2px] border-[#555555] flex items-center pl-4">
-                <span className="text-customWhite text-sm font-medium leading-[21px]">
-                    Move to folder
-                </span>
-            </div>
-            <div className="flex flex-col gap-2 px-4 pt-3">
-                <div className="text-customWhite text-sm font-medium leading-[21px] cursor-pointer">
-                    Edit
-                </div>
-                <div className=" flex justify-between text-customWhite text-sm font-medium leading-[21px] cursor-pointer">
-                    <span>Attach a file</span>
-                    <span>
-                        <PremiumIconGold />
-                    </span>
-                </div>
-                <div className="flex justify-between text-customWhite text-sm font-medium leading-[21px] cursor-pointer">
-                    <span>Share</span>
-                    <span>
-                        <PremiumIconGold />
-                    </span>
-                </div>
-                <div className="text-customWhite text-sm font-medium leading-[21px] cursor-pointer">
-                    Password history
-                </div>
-                <div className="text-customWhite text-sm font-medium leading-[21px] cursor-pointer">
-                    Move to trash
-                </div>
-            </div>
-        </div>
-    );
-};
-
 export default Page;
