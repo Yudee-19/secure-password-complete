@@ -11,7 +11,7 @@ import React from "react";
 const ShieldIcon = () => {
     return (
         <div className=" w-full h-full flex flex-col justify-center items-center">
-            <div className="justify-start text-white text-lg font-normal font-inter  uppercase tracking-widest">
+            <div className="justify-start text-white text-[14px] font-normal font-inter  uppercase tracking-widest">
                 Next-Gen Password Management
             </div>
             <div className="  w-[662px] relative h-[500px] flex justify-center items-center">

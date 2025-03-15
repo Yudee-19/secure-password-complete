@@ -6,6 +6,7 @@ import FolderIcon from "../icons/FolderIcon";
 import GreenBankIcon from "../icons/GreenBankIcon";
 import LockIcon from "../icons/LockIcon";
 import CryptoIcon from "../icons/CryptoIcon";
+import CloseIcon from "../icons/CloseIcon";
 
 interface SearchModalProps {
     isOpen: boolean;
@@ -34,7 +35,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                         className="w-full bg-transparent outline-none text-[#CCCCCC] placeholder-[#CCCCCC] placeholder:text-[18px] placeholder:font-medium ml-4"
                     />
                     <button onClick={onClose} className="text-white">
-                        ✖
+                        <CloseIcon />
                     </button>
                 </div>
 

@@ -17,7 +17,7 @@ const Page = () => {
     return (
         <div>
             <div className="flex h-screen w-screen">
-                <div className=" w-full max-w-[700px] flex-1 pt-21 pl-17 pb-11 flex flex-col justify-between h-full  bg-white">
+                <div className=" w-[661px]  pt-21 pl-17  pb-11 flex flex-col justify-between h-full  bg-white">
                     <div className="Logo flex gap-3 ">
                         <Logo width="35" height="31" />
                         <div className="justify-start text-customDark-0 text-2xl font-extrabold font-inter">
@@ -78,14 +78,19 @@ const Page = () => {
                                 >
                                     <input
                                         type="checkbox"
-                                        className="appearance-none w-4 h-4 border-2 border-stone-300 rounded-sm checked:bg-[#20934E] checked:border-[#20934E] relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:text-white checked:after:transform checked:after:-translate-x-1/2 checked:after:-translate-y-1/2"
+                                        className=" border-stone-300  appearance-none w-4 h-4 border-2  rounded-sm checked:bg-[#0F6FFD] checked:border-[#0F6FFD] relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:text-white checked:after:text-sm checked:after:transform checked:after:-translate-x-1/2 checked:after:-translate-y-1/2"
                                     />
                                 </label>
                                 <span className="text-textgray-100   text-sm font-medium font-inter leading-tight">
                                     Remember me
                                 </span>
                             </div>
-                            <span className=" cursor-pointer">
+                            <span
+                                className=" cursor-pointer"
+                                onClick={() => {
+                                    router.push("/forgotpassword");
+                                }}
+                            >
                                 <div className="text-right justify-start text-textgray-100 text-sm font-medium font-inter leading-tight">
                                     Forgot password?
                                 </div>
@@ -115,7 +120,7 @@ const Page = () => {
                         </span>
                     </div>
                 </div>
-                <div className="w-[804px] h-full flex-2  bg-[url(../public/bg.png)] bg-cover  flex justify-center items-center bg-blend-overlay bg-green-500/40 ">
+                <div className="w-[779px] h-full flex-1 bg-[url(../public/bg.png)] bg-cover  flex justify-center items-center bg-blend-overlay bg-green-500/40 ">
                     <ShieldIcon />
                 </div>
             </div>
