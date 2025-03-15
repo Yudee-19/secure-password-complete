@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Squircle from "../../icons/Squircle";
-import { PrimaryButton, SecondaryButton } from "../../components/Buttons";
+import { PrimaryButton } from "../../components/Buttons";
 import NotesSidebar from "../../components/NotesSidebar";
 import NotesIcon from "../../icons/NotesIcon";
 

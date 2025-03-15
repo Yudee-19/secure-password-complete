@@ -4,7 +4,7 @@ import ShieldIcon from "../components/ShieldIcon";
 import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../components/Buttons";
-const page = () => {
+const Page = () => {
     const router = useRouter();
     return (
         <div>
@@ -127,4 +127,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

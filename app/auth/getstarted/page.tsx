@@ -30,8 +30,8 @@ const Page = () => {
                     Get Started
                 </h1>
                 <p className="font-inter font-normal text-[16px] leading-[24px] tracking-[-0.5%] text-[#CCCCCC] mb-10">
-                    Now it's time to explore secure passwords and make your life
-                    more easier and secure.
+                    Now it&apos;s time to explore secure passwords and make your
+                    life more easier and secure.
                 </p>
 
                 <div className="flex flex-col gap-6">

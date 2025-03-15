@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Squircle from "../../icons/Squircle";
 import { PrimaryButton } from "../../components/Buttons";
 import PersonalInfoSidebar from "../../components/PersonalInfoSidebar";
-import CryptoIcon from "../../icons/CryptoIcon";
 import PersonalInfoIcon from "../../icons/PersonalInfoIcon";
 
 const Page = () => {

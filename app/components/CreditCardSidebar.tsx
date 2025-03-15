@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import CloseIcon from "../icons/CloseIcon";
 import { PrimaryButton, SecondaryButton } from "./Buttons";
 import Squircle from "../icons/Squircle";
-import GreenBankIcon from "../icons/GreenBankIcon";
 import ToggleButton from "./ToggleButton";
 import CreditCardIcon from "../icons/CreditCardIcon";
 

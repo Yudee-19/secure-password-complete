@@ -11,7 +11,7 @@ import TrashIcon from "@/app/icons/TrashIcon";
 import React, { useState } from "react";
 
 const Page = () => {
-    const [isSidebarModalOpen, setisSidebarModalOpen] = useState(false);
+    const [_isSidebarModalOpen, setisSidebarModalOpen] = useState(false);
     const openSidebarModal = () => {
         setisSidebarModalOpen(true);
     };

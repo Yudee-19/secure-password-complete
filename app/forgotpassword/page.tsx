@@ -3,11 +3,9 @@ import ShieldIcon from "../components/ShieldIcon";
 import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../components/Buttons";
-import EyeIcon from "../icons/EyeIcon";
-import PasswordStrengthIndicator from "../components/PasswordStrengthIndicator";
 import Arrow from "../components/Arrow";
 
-const page = () => {
+const Page = () => {
     const router = useRouter();
     return (
         <div>
@@ -90,4 +88,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

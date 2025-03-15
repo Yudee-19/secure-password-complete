@@ -12,7 +12,7 @@ type PasswordStrengthType = {
     color: string;
 };
 
-const page = () => {
+const Page = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [masterPassword, setMasterPassword] = useState("");
     const [passwordStrength, setPasswordStrength] =
@@ -156,4 +156,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

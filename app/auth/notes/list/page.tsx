@@ -1,13 +1,11 @@
 "use client";
 import NotesSidebar from "@/app/components/NotesSidebar";
-import { PrimaryButton, SecondaryButton } from "@/app/components/Buttons";
+import { PrimaryButton } from "@/app/components/Buttons";
 import DropDownIcon from "@/app/icons/DropDownIcon";
 import NotesIcon from "@/app/icons/NotesIcon";
-import OptionsIcon from "@/app/icons/OptionsIcon";
-import PremiumIconGold from "@/app/icons/PremiumIconGold";
-import ShareIcon from "@/app/icons/ShareIcon";
 import Squircle from "@/app/icons/Squircle";
 import React, { useState } from "react";
+import PremiumIconGold from "@/app/icons/PremiumIconGold";
 
 const Page = () => {
     const [isSidebarModalOpen, setisSidebarModalOpen] = useState(false);

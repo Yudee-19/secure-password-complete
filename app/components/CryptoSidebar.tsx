@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import CloseIcon from "../icons/CloseIcon";
 import { PrimaryButton, SecondaryButton } from "./Buttons";
 import Squircle from "../icons/Squircle";
-import GreenBankIcon from "../icons/GreenBankIcon";
 import ToggleButton from "./ToggleButton";
 import CryptoIcon from "../icons/CryptoIcon";
 
@@ -37,19 +36,6 @@ const formFields: formFieldsProp[] = [
         id: 4,
         placeholder: "Paraphrase",
         height: "138px",
-    },
-];
-
-const otherFields: formFieldsProp[] = [
-    {
-        id: 1,
-        placeholder: "Folder",
-        height: "69px",
-    },
-    {
-        id: 2,
-        placeholder: "Note",
-        height: "200px",
     },
 ];
 

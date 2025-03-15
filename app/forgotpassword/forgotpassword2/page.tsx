@@ -1,13 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../../components/Buttons";
-import EyeIcon from "../../icons/EyeIcon";
 import OtpBox from "../../components/OtpBox";
 import Arrow from "@/app/components/Arrow";
-const page = () => {
+const Page = () => {
     const handleOtpComplete = (otp: string) => {
         console.log("Completed OTP:", otp);
         // Handle verification here
@@ -86,4 +85,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

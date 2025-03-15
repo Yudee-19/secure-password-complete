@@ -1,5 +1,4 @@
 import React from "react";
-import PremiumIcon from "../icons/PremiumIcon";
 import CrownIcon from "../icons/CrownIcon";
 import SharingCenterIcon from "../icons/SharingCenterIcon";
 import LockIcon from "../icons/LockIcon";

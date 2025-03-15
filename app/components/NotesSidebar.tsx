@@ -1,7 +1,5 @@
 import React, { useState, ChangeEvent } from "react";
 import CloseIcon from "../icons/CloseIcon";
-import { PrimaryButton, SecondaryButton } from "./Buttons";
-import EyeIcon from "../icons/EyeIcon";
 import UploadIcon from "../icons/UploadIcon";
 import ToggleButton from "./ToggleButton";
 

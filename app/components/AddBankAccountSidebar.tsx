@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CloseIcon from "../icons/CloseIcon";
 import { PrimaryButton, SecondaryButton } from "./Buttons";
 import Squircle from "../icons/Squircle";
@@ -66,19 +66,6 @@ const formFields: formFieldsProp[] = [
         id: 10,
         placeholder: "Branch Phone",
         height: "69px",
-    },
-];
-
-const otherFields: formFieldsProp[] = [
-    {
-        id: 1,
-        placeholder: "Folder",
-        height: "69px",
-    },
-    {
-        id: 2,
-        placeholder: "Note",
-        height: "200px",
     },
 ];
 

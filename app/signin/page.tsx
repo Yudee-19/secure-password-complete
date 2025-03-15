@@ -5,7 +5,8 @@ import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../components/Buttons";
 import EyeIcon from "../icons/EyeIcon";
-const page = () => {
+
+const Page = () => {
     const [showPassword, setShowPassword] = useState(false);
     // Toggle password visibility
     const togglePasswordVisibility = () => {
@@ -117,4 +118,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
