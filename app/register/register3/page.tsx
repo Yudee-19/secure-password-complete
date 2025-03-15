@@ -4,7 +4,9 @@ import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
 import { PrimaryButton } from "../../components/Buttons";
 import OtpBox from "../../components/OtpBox";
+import { useRouter } from "next/navigation";
 const Page = () => {
+    const router = useRouter();
     const handleOtpComplete = (otp: string) => {
         console.log("Completed OTP:", otp);
         // Handle verification here
@@ -37,7 +39,11 @@ const Page = () => {
                             <OtpBox onComplete={handleOtpComplete} />
                         </div>
 
-                        <div>
+                        <div
+                            onClick={() => {
+                                router.push("/auth/vault");
+                            }}
+                        >
                             <PrimaryButton
                                 height="40"
                                 width="100%"

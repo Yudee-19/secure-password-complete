@@ -91,7 +91,12 @@ const Page = () => {
                                 </div>
                             </span>
                         </div>
-                        <div>
+                        <div
+                            className="cursor-pointer"
+                            onClick={() => {
+                                router.push("/auth/vault");
+                            }}
+                        >
                             <PrimaryButton
                                 height="40"
                                 width="100%"

@@ -67,7 +67,7 @@ const Page = () => {
                             </label>
                         </div>
                         <div className=" flex justify-between items-center h-5 w-[427px]">
-                            <div className="flex items-center justify-center gap-1">
+                            <div className="flex h-[21px] items-center justify-center gap-1">
                                 <label
                                     htmlFor="remember"
                                     className="flex gap-1"
@@ -77,7 +77,7 @@ const Page = () => {
                                         className="appearance-none w-4 h-4 border-2 border-stone-300 rounded-sm checked:bg-[#20934E] checked:border-[#20934E] relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:text-white checked:after:transform checked:after:-translate-x-1/2 checked:after:-translate-y-1/2"
                                     />
                                 </label>
-                                <div className=" flex items-center justify-center ">
+                                <div className=" justify-start w-[450px]   ">
                                     <span className="text-Color-text-secondary text-sm font-medium font-inter leading-tight">
                                         I agree to SecurePasswords 
                                     </span>
