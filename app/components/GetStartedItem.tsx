@@ -1,5 +1,5 @@
 import React from "react";
-import GetStartedItemProps from "../types/GetStartedItem";
+import GetStartedItemProps from "../../types/GetStartedItem";
 import DropDownIcon from "../icons/DropDownIcon";
 import GreenTickIcon from "../icons/GreenTickIcon";
 

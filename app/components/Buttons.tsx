@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonInterface } from "../types/Button";
+import { ButtonInterface } from "../../types/Button";
 
 const PrimaryButton = ({ height, width, text }: ButtonInterface) => {
     return (

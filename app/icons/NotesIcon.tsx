@@ -1,4 +1,4 @@
-import { IconProp } from "../types/icon";
+import { IconProp } from "../../types/icon";
 
 export default function NotesIcon({ color, height, width }: IconProp) {
     return (

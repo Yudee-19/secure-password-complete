@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProp } from "../types/icon";
+import { IconProp } from "../../types/icon";
 const TrashIcon = ({ height, width, color }: IconProp) => {
     return (
         <svg

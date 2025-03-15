@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProp } from "../types/icon";
+import { IconProp } from "../../types/icon";
 
 const PersonalInfoIcon = ({ height, width, color }: IconProp) => {
     return (
