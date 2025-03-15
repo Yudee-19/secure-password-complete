@@ -25,5 +25,17 @@ const SecondaryButton = ({ height, width, text }: ButtonInterface) => {
         </div>
     );
 };
+const RedSecondaryButton = ({ height, width, text }: ButtonInterface) => {
+    return (
+        <div
+            className={` border-[#EFEFEF] border-[2px] flex items-center justify-center  rounded-sm cursor-pointer `}
+            style={{ width: `${width}px`, height: `${height}px` }}
+        >
+            <p className="w-full font-inter font-medium text-[16px] leading-[24px] tracking-[-0.5%] text-center text-[#F14444]">
+                {text}
+            </p>
+        </div>
+    );
+};
 
-export { PrimaryButton, SecondaryButton };
+export { PrimaryButton, SecondaryButton, RedSecondaryButton };

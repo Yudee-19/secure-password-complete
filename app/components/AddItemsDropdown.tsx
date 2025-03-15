@@ -2,7 +2,7 @@ import React from "react";
 import LockIcon from "../icons/LockIcon";
 import NotesIcon from "../icons/NotesIcon";
 import PersonalInfoIcon from "../icons/PersonalInfoIcon";
-import CredirCardIcon from "../icons/CredirCardIcon";
+import CreditCardIcon from "../icons/CreditCardIcon";
 import BankIcon from "../icons/BankIcon";
 import CryptoIcon from "../icons/CryptoIcon";
 
@@ -20,12 +20,12 @@ const dropDownItem = [
     {
         id: 3,
         title: "Personal Info",
-        icon: <PersonalInfoIcon />,
+        icon: <PersonalInfoIcon height="24px" width="24px" color="#a0a0a0" />,
     },
     {
         id: 4,
         title: "Credit Card",
-        icon: <CredirCardIcon />,
+        icon: <CreditCardIcon height="24px" width="24px" color="#a0a0a0" />,
     },
     {
         id: 5,

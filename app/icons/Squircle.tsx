@@ -8,9 +8,7 @@ interface SquircleProp {
 }
 
 const Squircle = ({ insideIcon, height, width, color }: SquircleProp) => {
-    const foreignObjectSize = parseFloat(height);
-
-    // Calculate the position to center the icon (50% - half of icon size)
+    const foreignObjectSize = 70;
     const position = (100 - foreignObjectSize) / 2;
     return (
         <svg
@@ -53,7 +51,7 @@ const Squircle = ({ insideIcon, height, width, color }: SquircleProp) => {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        zIndex: 10, // Higher z-index to ensure it's on top
+                        zIndex: 10,
                     }}
                 >
                     <div
