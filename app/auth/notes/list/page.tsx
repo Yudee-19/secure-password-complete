@@ -5,7 +5,6 @@ import DropDownIcon from "@/app/icons/DropDownIcon";
 import NotesIcon from "@/app/icons/NotesIcon";
 import Squircle from "@/app/icons/Squircle";
 import React, { useState } from "react";
-import PremiumIconGold from "@/app/icons/PremiumIconGold";
 
 const Page = () => {
     const [isSidebarModalOpen, setisSidebarModalOpen] = useState(false);
