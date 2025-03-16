@@ -16,7 +16,7 @@ export default function SettingsPageNavbar() {
       <h1 className="font-Inter font-bold text-[32px] leading-[18.73px] pb-10 text-[#EFEFEF]">Settings</h1>
 
       {/* Tabs as individual buttons */}
-      <div className="flex justify-between w-[1000px] pt-1 gap-[20px]">
+      <div className="flex justify-between w-[930px] pt-1 gap-[13px]">
         {[
           { name: 'Account', path: '/auth/account' },
           //{ name: 'MFA', path: '/mfa' },
@@ -25,7 +25,7 @@ export default function SettingsPageNavbar() {
           { name: 'Appearance', path: '/auth/appearance' },
           //{ name: 'Equivalent Domains', path: '/equivalent-domains' },
           { name: 'Never URLs', path: '/auth/neverUrls' },
-          { name: 'Backup', path: '/auth/backup' },
+          { name: 'Backup Options', path: '/auth/backup' },
         ].map((tab) => (
           <button
             key={tab.name}

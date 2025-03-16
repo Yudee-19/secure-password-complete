@@ -20,7 +20,7 @@ export default function SettingsNeverURLPage() {
   };
 
   return (
-    <div className="bg-nav1color w-[984px] h-auto top-[265px] left-[402px] rounded-[12px] p-5">
+    <div className=" bg-[#151515] w-[984px] h-auto top-[265px] left-[402px] rounded-[12px] p-5">
       <h2 className="text-2xl pl-5 pt-5 pb-3 text-gray-200">Never URLs</h2>
       
       <div className="pl-4 pt-1">

@@ -33,7 +33,7 @@ export default function Sidebar({
         }
     };
     return (
-        <div className="h-screen w-[335px] bg-customDark-300 fixed flex flex-col top-[82px] left-0 overflow-scroll text-gray-200  ">
+        <div className="h-screen w-[335px] no-scrollbar bg-customDark-300 fixed flex flex-col top-[82px] left-0 overflow-scroll text-gray-200  ">
             <div
                 className=""
                 onClick={() => {

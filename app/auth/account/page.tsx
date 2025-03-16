@@ -16,7 +16,7 @@ export default function Home() {
       <div className=" ">
         <SettingsPageNavbar/>
       </div>
-      <div className="p-8">
+      <div className="pt-8">
         <SettingsPage/>
       </div>
       </div>

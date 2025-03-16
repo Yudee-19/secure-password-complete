@@ -12,11 +12,11 @@ export default function Home() {
 
    
       
-      <div className="bg-[#191919] pl-[380px] pt-25 text-white min-h-screen p-9 flex flex-col">
+      <div className="bg-[#191919] pl-[380px] pt-25 text-white min-h-screenflex flex-col">
       <div>
         <SettingsPageNavbar/>
       </div>
-      <div className="">
+      <div className="pt-3 pr-15">
         <SecuritySettings/>
       </div>
       </div>

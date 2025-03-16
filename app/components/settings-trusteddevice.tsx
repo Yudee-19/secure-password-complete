@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function SettingsTrustedDevicePage() {
   return (
-    <div>
-      <div className=" p-6 rounded-lg w-[100%] mx-auto">
+    <div className=" bg-[#191919]">
+      <div className=" p-6 rounded-lg  bg-[#191919]  w-[100%] mx-auto">
         <h2 className="text-2xl font-light mb-4 text-gray-300">
           Trusted Devices
         </h2>

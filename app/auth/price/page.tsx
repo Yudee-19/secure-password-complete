@@ -5,7 +5,7 @@ import PricingCard2 from "@/app/components/premiumpricing"
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-screen bg-transparent text-white">
+    <div className="flex flex-col h-screen  bg-[#191919] text-white">
     <div>
       <Navbar />
     </div>
@@ -18,7 +18,7 @@ export default function Home() {
           <h3 className="text-gray-400 text-sm">Choose a plan according to your needs</h3>
         </div>
 
-        <div className="flex  justify-center items-center space-x-6">
+        <div className="flex bg-[#191919]  justify-center items-center space-x-6">
           <PricingCard />
           <PricingCard2 />
         </div>

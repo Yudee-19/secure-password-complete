@@ -38,4 +38,17 @@ const RedSecondaryButton = ({ height, width, text }: ButtonInterface) => {
     );
 };
 
-export { PrimaryButton, SecondaryButton, RedSecondaryButton };
+const BlackPrimaryButton = ({ height, width, text }: ButtonInterface) => {
+    return (
+        <div
+            className={` bg-customDark-200 border-[2px] border-[#CCCCCC] flex items-center justify-center rounded-sm cursor-pointer `}
+            style={{ width: `${width}px`, height: `${height}px` }}
+        >
+            <p className=" font-inter font-medium text-[16px] leading-[24px] tracking-[-0.5%] text-center text-[#CCCCCC]">
+                {text}
+            </p>
+        </div>
+    );
+};
+
+export { PrimaryButton, SecondaryButton, RedSecondaryButton , BlackPrimaryButton };

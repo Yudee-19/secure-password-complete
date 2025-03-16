@@ -4,7 +4,7 @@ export default function SettingsPage() {
   return (
     <div className="space-y-6 bg-[#151515]">
       {/* Account Info Section */}
-      <div className="w-[984px] bg-[#151515] h-[352px] top-[265px] left-[401px] rounded-[12px] ">
+      <div className="w-[800px] bg-[#151515] h-[352px] top-[265px] left-[401px] rounded-[12px] ">
         <h2 className="w-[200px] pl-6 pt-6 h-[29px] top-[297px] left-[433px] font-inter font-normal text-[24px] leading-[29.05px]">
           Account Info
         </h2>
