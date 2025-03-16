@@ -14,7 +14,7 @@ export default function AuthLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="antialiased bg-customDark-100 flex flex-col h-screen">
+        <div className="antialiased bg-customDark-50 flex flex-col h-screen">
             <Navbar />
             <div className="">
                 <Sidebar
