@@ -3,6 +3,8 @@ import CrownIcon from "../icons/CrownIcon";
 import SharingCenterIcon from "../icons/SharingCenterIcon";
 import LockIcon from "../icons/LockIcon";
 import LogoutIcon from "../icons/LogoutIcon";
+import Link from 'next/link';
+
 const ProfileModal = () => {
     return (
         <div className="w-[336px] h-[400px] realtive bg-customDark-300 rounded-2xl p-6 flex flex-col gap-6">
@@ -23,6 +25,9 @@ const ProfileModal = () => {
                 </div>
             </div>
             <div>
+                
+
+                <Link href="/auth/price">
                 <div className="py-4 flex gap-3 items-center">
                     <span className="w-[24px] h-[24px]">
                         <CrownIcon />
@@ -31,6 +36,7 @@ const ProfileModal = () => {
                         Upgrade
                     </p>
                 </div>
+                </Link>
                 <div className="py-4 flex gap-3 items-center">
                     <span className="w-[24px] h-[24px]">
                         <SharingCenterIcon

@@ -9,6 +9,7 @@ import NotificationSidebar from "./NotificationSidebar";
 import { useRouter } from "next/navigation";
 import ProfileModal from "./ProfileModal";
 import Logo from "../icons/Logo";
+import Link from 'next/link';
 
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,9 +95,11 @@ const Navbar = () => {
 
                     {/* Settings Icon */}
                     {/* Agnitro add onlcick  in the below div */}
+                    <Link href="/auth/Settings">
                     <div className="w-[28px] h-[28px] cursor-pointer">
                         <SettingsIcon />
                     </div>
+                    </Link>
 
                     {/* Profile Section */}
                     <span className="relative group">
