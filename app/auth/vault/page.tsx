@@ -4,9 +4,10 @@ import { PrimaryButton, SecondaryButton } from "../../components/Buttons";
 import Squircle from "../../icons/Squircle";
 import BrokenLock from "../../icons/BrokenLock";
 import AddItemsDropdown from "../../components/AddItemsDropdown";
-
+import AddItemsModal from "../../components/AddItemsModal";
 const Page = () => {
     const [isDropDownOpen, setisDropDownOpen] = useState(false);
+    const [isAddItemsModalOpen, setIsAddItemsModalOpen] = useState(false);
 
     // Toggle dropdown visibility
     const toggleDropDown = (e: React.MouseEvent) => {
@@ -17,6 +18,14 @@ const Page = () => {
     // Close dropdown when clicking outside
     const closeDropDown = () => {
         setisDropDownOpen(false);
+    };
+
+    const openAddItemsModal = () => {
+        setIsAddItemsModalOpen(true);
+    };
+
+    const closeAddItemsModal = () => {
+        setIsAddItemsModalOpen(false);
     };
 
     return (
@@ -32,9 +41,7 @@ const Page = () => {
                 {" "}
                 <div
                     className="flex justify-center"
-                    onClick={(e) => {
-                        toggleDropDown(e);
-                    }}
+                    onClick={openAddItemsModal}
                 >
                     <PrimaryButton text="Add Items" height="40" width="154" />
                 </div>
@@ -57,6 +64,10 @@ const Page = () => {
                     />
                 </div>
             </div>
+            <AddItemsModal
+                isOpen={isAddItemsModalOpen}
+                onClose={closeAddItemsModal}
+            />
         </div>
     );
 };

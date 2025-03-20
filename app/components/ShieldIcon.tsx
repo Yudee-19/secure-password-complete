@@ -10,12 +10,12 @@ import React from "react";
 
 const ShieldIcon = () => {
     return (
-        <div className=" w-full h-full flex flex-col justify-center items-center">
+        <div className=" w-full h-full flex flex-2 flex-col justify-center items-center">
             <div className="justify-start text-white text-[14px] font-normal font-inter  uppercase tracking-widest">
                 Next-Gen Password Management
             </div>
             <div className="  w-[662px] relative h-[500px] flex justify-center items-center">
-                <span>
+                <span className=" lg:w-96 w-72">
                     <Image
                         className=" relative z-50"
                         src={shieldPng}
@@ -26,7 +26,7 @@ const ShieldIcon = () => {
                 </span>
 
                 {/* Netflix layout */}
-                <span>
+                <span className=" hidden lg:block">
                     <div className=" absolute  top-19 left-26 flex items-center justify-between gap px-4 py-2  bg-white/70 rounded-xl shadow-[0px_1px_4px_0px_rgba(0,0,0,0.10)] w-[346px] h-[56px]">
                         <div className="Icon flex items-center gap-2">
                             <Squircle
@@ -90,7 +90,7 @@ const ShieldIcon = () => {
                     <div className=" absolute z-59 top-91 -right-[19px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  w-[343px] h-[56px]"></div>
                     <div className=" absolute z-58 top-92 -right-[16px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  w-[337px] h-[56px]"></div>
                 </span>
-                <div className="h-[75px] w-[275px] absolute bottom-35  left-7 bg-white/70 rounded-xl flex gap-3 items-center pl-4 py-4">
+                <div className="h-[75px] hidden lg:flex w-[275px] absolute bottom-35  left-7 bg-white/70 rounded-xl  gap-3 items-center pl-4 py-4">
                     <div className=" h-10 w-10 rounded-full  bg-[#08291A] absolute -top-4 -left-4 flex justify-center items-center">
                         <span>
                             <WrenchIcon />

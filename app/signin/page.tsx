@@ -5,6 +5,7 @@ import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
 import { PrimaryButton } from "../components/Buttons";
 import EyeIcon from "../icons/EyeIcon";
+import AppleStore from "../icons/AppleStore";
 
 const Page = () => {
     const [showPassword, setShowPassword] = useState(false);
@@ -16,18 +17,18 @@ const Page = () => {
     const router = useRouter();
     return (
         <div>
-            <div className="flex h-screen w-screen">
-                <div className=" w-[661px]  pt-21 pl-17  pb-11 flex flex-col justify-between h-full  bg-white">
-                    <div className="Logo flex gap-3 ">
+            <div className="flex  h-screen w-screen">
+                <div className=" md:w-[661px] w-full   flex flex-col justify-between items-center md:items-start h-full  bg-white md:pt-21 md:pl-17 px:5  md:pb-11">
+                    <div className="Logo flex gap-3 pt-[100px] md:pt-0 ">
                         <Logo width="35" height="31" />
-                        <div className="justify-start text-customDark-0 text-2xl font-extrabold font-inter">
+                        <div className="justify-start text-customDark-0 md:text-2xl text-xl font-extrabold font-inter">
                             Secure Passwords
                         </div>
                     </div>
 
-                    <div className="w-96 h-72 gap-5 flex flex-col ">
+                    <div className="xs:w-96 w-72  h-72 gap-5  flex flex-col ">
                         <div className="flex flex-col gap-2">
-                            <div className="justify-start text-customDark-0 text-3xl font-bold font-inter">
+                            <div className="justify-start text-customDark-0 md:text-3xl xs:text2xl text-lg  font-bold font-inter">
                                 Welcome back!
                             </div>
                             <div className="justify-start">
@@ -47,7 +48,7 @@ const Page = () => {
                         <div id="Id-field">
                             <label htmlFor="id">
                                 <input
-                                    className="w-96 h-12  rounded  border-2 border-stone-300 outline-none  text-textgray-100 placeholder:text-textgray-100 outline-stone-300 overflow-hidden px-4"
+                                    className="xs:w-96 w-72 h-12  rounded  border-2 border-stone-300 outline-none  text-textgray-100 placeholder:text-textgray-100 outline-stone-300 overflow-hidden px-4"
                                     id="id"
                                     type="text"
                                     placeholder="Username or Email"
@@ -57,7 +58,7 @@ const Page = () => {
                         <div id="Password-field" className="relative">
                             <label htmlFor=" password ">
                                 <input
-                                    className="w-96 h-12  rounded border-2 border-stone-300 outline-none text-textgray-100 placeholder:text-textgray-100 outline-stone-300 overflow-hidden px-4"
+                                    className="xs:w-96 w-72 h-12  rounded border-2 border-stone-300 outline-none text-textgray-100 placeholder:text-textgray-100 outline-stone-300 overflow-hidden px-4"
                                     id="password"
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Master Password"
@@ -111,7 +112,7 @@ const Page = () => {
                     </div>
 
                     {/* Version Info */}
-                    <div className="VersionInfo">
+                    <div className="VersionInfo md:block hidden">
                         <span className="text-textgray-100 text-base font-medium font-inter leading-normal">
                             Version{" "}
                         </span>
@@ -119,8 +120,20 @@ const Page = () => {
                             2024.1.0
                         </span>
                     </div>
+
+                    {/* Mobile version */}
+                    <div className="flex md:hidden flex-col justify-center items-center gap-4 py-6 border-t-2 border-[#ffffff] ">
+                        <div className="xs:w-96 w-72 text-center justify-start text-textgray-100 text-sm font-medium font-inter leading-tight">
+                            It seems you're on a mobile device. For the best
+                            experience, we suggest downloading our <br />
+                            mobile app.
+                        </div>
+                        <div className="">
+                            <AppleStore />
+                        </div>
+                    </div>
                 </div>
-                <div className="w-[779px] h-full flex-1 bg-[url(../public/bg.png)] bg-cover  flex justify-center items-center bg-blend-overlay bg-green-500/40 ">
+                <div className="w-[779px] hidden h-full flex-1 bg-[url(../public/bg.png)] bg-cover  md:flex justify-center items-center bg-blend-overlay bg-green-500/40 ">
                     <ShieldIcon />
                 </div>
             </div>

@@ -1,10 +1,11 @@
+import { IconProp } from "@/types/icon";
 import React from "react";
 
-const BankIcon = ({ color }: { color?: string }) => {
+const BankIcon = ({ color, height, width }: IconProp) => {
     return (
         <svg
-            width="18"
-            height="20"
+            width={width ? width : "18"}
+            height={height ? height : "20"}
             viewBox="0 0 18 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

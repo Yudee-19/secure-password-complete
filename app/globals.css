@@ -23,6 +23,7 @@
     --font-inter: "Inter", sans-serif;
     --font-jetbrains: "JetBrains Mono", monospace;
     --font-sans: "Public Sans", sans-serif;
+    --breakpoint-xs: 25rem;
 }
 
 :root {
