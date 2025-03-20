@@ -124,8 +124,8 @@ const Page = () => {
                     {/* Mobile version */}
                     <div className="flex md:hidden flex-col justify-center items-center gap-4 py-6 border-t-2 border-[#ffffff] ">
                         <div className="xs:w-96 w-72 text-center justify-start text-textgray-100 text-sm font-medium font-inter leading-tight">
-                            It seems you're on a mobile device. For the best
-                            experience, we suggest downloading our <br />
+                            It seems you&apos;re on a mobile device. For the
+                            best experience, we suggest downloading our <br />
                             mobile app.
                         </div>
                         <div className="">

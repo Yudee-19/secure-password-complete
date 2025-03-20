@@ -9,12 +9,6 @@ const Page = () => {
     const [isDropDownOpen, setisDropDownOpen] = useState(false);
     const [isAddItemsModalOpen, setIsAddItemsModalOpen] = useState(false);
 
-    // Toggle dropdown visibility
-    const toggleDropDown = (e: React.MouseEvent) => {
-        e.stopPropagation(); // Stop event propagation to prevent immediate closing
-        setisDropDownOpen((prevState) => !prevState);
-    };
-
     // Close dropdown when clicking outside
     const closeDropDown = () => {
         setisDropDownOpen(false);
