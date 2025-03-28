@@ -24,7 +24,7 @@ const Page = () => {
         );
     };
     return (
-        <div className="pl-[335px] pt-[82px] bg-customDark-50 min-h-screen">
+        <div className="2xl:pl-[335px] pl-[270px]  pt-[82px] bg-customDark-50 min-h-screen">
             <div className="px-[60px] py-[30px]">
                 <h1 className="font-inter font-semibold text-[32px] leading-[38.73px] text-white mb-2">
                     Get Started

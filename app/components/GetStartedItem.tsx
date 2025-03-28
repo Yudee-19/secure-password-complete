@@ -13,7 +13,7 @@ const GetStartedItem = ({
 }: GetStartedItemProps) => {
     return (
         <div
-            className={`w-[990px] h-[90px] flex justify-between items-center transition-all duration-300 `}
+            className={`w-full h-[90px] flex justify-between items-center transition-all duration-300 `}
         >
             <div
                 className={`w-[536px] h-[65px] flex items-center justify-center gap-4 ${
@@ -36,7 +36,7 @@ const GetStartedItem = ({
                 onClick={onclick}
             >
                 <div
-                    className={`h-6 w-[112px] text-[16px] font-normal leading-6 tracking-tight ${
+                    className={`h-6 w-40 text-[16px] font-normal leading-6 tracking-tight ${
                         completed ? "text-[#2ED370]" : "text-white"
                     }`}
                 >
