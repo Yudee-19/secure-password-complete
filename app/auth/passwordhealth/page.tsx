@@ -29,7 +29,7 @@ const Page = () => {
         {
             id: 3,
             title: "Netflix",
-            risk: "weak",
+            risk: "old",
         },
         {
             id: 4,
@@ -38,13 +38,13 @@ const Page = () => {
         },
     ];
     return (
-        <div className=" flex flex-col gap-6 mt-[82px] ml-[335px] p-[42px] ">
+        <div className=" flex flex-col gap-6 mt-[82px] 2xl:ml-[335px] ml-[270px] p-[42px] ">
             {/* first section */}
             <div className="h-[324px] w-full bg-[#121010] rounded-lg p-8">
                 <div className="text-textgray-200 text-xs font-bold font-sans uppercase tracking-wide mb-6">
                     Password Health
                 </div>
-                <div className="flex gap-[135px]">
+                <div className="flex  justify-between 2xl:justify-around">
                     <div className="w-[184px] h-[184px] rounded-full border-[10px] border-[#2ED370] flex flex-col items-center justify-center">
                         <div className="text-[#2ED370] text-6xl font-extrabold font-inter">
                             100
@@ -151,7 +151,7 @@ const Page = () => {
                 {riskPasswordsArray.map((password) => (
                     <div
                         key={password.id}
-                        className="w-[984px] px-6 flex justify-between h-16 mx-4"
+                        className="w-full px-6 flex justify-between h-16 mx-4"
                     >
                         <div className="flex  w-[162px] items-center gap-2">
                             <span>
@@ -179,7 +179,7 @@ const Page = () => {
                                     : "Old Password"}
                             </div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 pr-8">
                             <span>
                                 <div className="w-[191px] h-10 border-[2px] border-[#A0A0A0] flex gap-2 items-center justify-center rounded-sm cursor-pointer">
                                     <WrenchIcon color="#A0A0A0" />
@@ -199,4 +199,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Page;

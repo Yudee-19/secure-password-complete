@@ -4,7 +4,7 @@ import TrashIcon from "../../icons/TrashIcon";
 
 const page = () => {
     return (
-        <div className="w-full min-h-screen pl-[335px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
+        <div className="w-full min-h-screen 2xl:pl-[335px] pl-[270px]   bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
             <Squircle
                 height="100"
                 width="100"

@@ -14,7 +14,7 @@ const Page = () => {
         setisSidebarModalOpen(false);
     };
     return (
-        <div className="w-full  min-h-screen pl-[335px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
+        <div className="w-full  min-h-screen 2xl:pl-[335px] pl-[270px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
             <Squircle height="100" width="98" insideIcon={<Lock2 />} />
             <div className="w-[313px] h-[29px] font-inter font-bold text-[24px] leading-[29.05px] tracking-normal text-customWhite">
                 Goodbye Password Resets

@@ -15,7 +15,7 @@ const Page = () => {
     return (
         <div>
             <div className="flex h-screen w-screen">
-                <div className=" w-full max-w-[700px] flex-1 pt-21 pl-17 pb-11 flex flex-col justify-between h-full  bg-white">
+                <div className=" w-[661px] pt-21 pl-17 pb-11 flex flex-col justify-between h-full  bg-white">
                     <div className="Logo flex gap-3 ">
                         <Logo width="35" height="31" />
                         <div className="justify-start text-customDark-0 text-2xl font-extrabold font-inter">

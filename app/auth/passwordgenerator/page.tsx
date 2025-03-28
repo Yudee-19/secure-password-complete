@@ -56,12 +56,12 @@ const Page = () => {
     };
 
     return (
-        <div className="w-full  h-screen overflow-y-scroll pl-[335px] pt-[82px] flex flex-col ">
+        <div className=" h-screen overflow-y-scroll 2xl:pl-[335px] pl-[270px] pt-[82px] flex flex-col ">
             <div className=" h-[370px] w-full bg-[#060606] relative">
-                <div className=" absolute top-[50px] left-[75px] text-textgray-200 text-xs font-bold font-inter uppercase tracking-wide">
+                <div className=" absolute top-[50px] 2xl:left-[75px] left-[32px] text-textgray-200 text-xs font-bold font-inter uppercase tracking-wide">
                     Password generator
                 </div>
-                <div className="absolute top-[80px] left-[75px] text-white text-4xl font-bold font-jetbrains">
+                <div className="absolute top-[80px] 2xl:left-[75px] left-[32px] text-white text-4xl font-bold font-jetbrains">
                     {password.split("").map((char, index) => (
                         <span
                             key={index}
@@ -76,7 +76,7 @@ const Page = () => {
                     ))}
                 </div>
 
-                <div className="absolute bottom-[32px] left-[75px] px-4 py-2 bg-[#EEB258] rounded-lg inline-flex justify-center items-center gap-2">
+                <div className="absolute bottom-[32px] 2xl:left-[75px] left-[32px] px-4 py-2 bg-[#EEB258] rounded-lg inline-flex justify-center items-center gap-2">
                     <div className="justify-start text-white text-xs font-bold font-sans uppercase tracking-wide">
                         Moderate
                     </div>
@@ -99,7 +99,7 @@ const Page = () => {
                     </span>
                 </span>
             </div>
-            <div className="w-full flex-1 flex flex-col divide-y divide-[#353535] h-full px-20 bg-customDark-100">
+            <div className="w-full flex-1 flex flex-col divide-y divide-[#353535] h-full 2xl:px-20 px-5 bg-customDark-100">
                 <div className=" py-10 flex items-center gap-20 ">
                     <div className="flex flex-col gap-3">
                         <div className=" text-white text-lg font-medium font-inter ">
@@ -234,7 +234,7 @@ const Page = () => {
                         <SecondaryButton
                             text="+Save Password"
                             height="40"
-                            width="993"
+                            width=""
                         />
                     </div>
                 </div>

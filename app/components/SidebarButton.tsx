@@ -19,7 +19,7 @@ export default function SidebarButton({
 
     return (
         <div
-            className={`h-[55px] group w-[335px] flex align-middle gap-2 pl-6 items-center ${
+            className={`h-[55px] group 2xl:w-[335px] xl:w-[270px] flex align-middle gap-2 pl-6 items-center ${
                 selected
                     ? "bg-hoverdark text-white"
                     : "bg-customDark-300 hover:bg-hoverdark hover:text-white"

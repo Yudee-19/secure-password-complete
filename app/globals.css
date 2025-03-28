@@ -24,6 +24,8 @@
     --font-jetbrains: "JetBrains Mono", monospace;
     --font-sans: "Public Sans", sans-serif;
     --breakpoint-xs: 25rem;
+    --breakpoint-xl: 75rem;
+    --breakpoint-2xl: 85rem;
 }
 
 :root {

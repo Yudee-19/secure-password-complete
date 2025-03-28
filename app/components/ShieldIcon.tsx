@@ -27,7 +27,7 @@ const ShieldIcon = () => {
 
                 {/* Netflix layout */}
                 <span className=" hidden lg:block">
-                    <div className=" absolute  top-19 left-26 flex items-center justify-between gap px-4 py-2  bg-white/70 rounded-xl shadow-[0px_1px_4px_0px_rgba(0,0,0,0.10)] w-[346px] h-[56px]">
+                    <div className=" absolute  top-19 left-26 flex items-center justify-between gap px-4 py-2  bg-white/70 rounded-xl shadow-[0px_1px_4px_0px_rgba(0,0,0,0.10)] 2xl:w-[346px] w-[310px] h-[56px]">
                         <div className="Icon flex items-center gap-2">
                             <Squircle
                                 height="40"
@@ -54,41 +54,43 @@ const ShieldIcon = () => {
                             </p>
                         </div>
                     </div>
-                    <div className=" absolute z-60 top-90 -right-5 flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  w-[346px] h-[56px]">
-                        <div className="Icon flex items-center gap-2">
-                            <span className="relative">
-                                <Squircle
-                                    height="40"
-                                    width="40"
-                                    color="#151515"
-                                />
-                                <Image
-                                    className=" absolute top-[10px] left-[14px]"
-                                    src={netflixPng}
-                                    alt="shield"
-                                    width={13}
-                                    height={13}
-                                />
-                            </span>
-                            <div>
-                                <p className="font-inter font-medium text-base leading-[24px] tracking-[-0.5%] text-customDark-0">
-                                    Netflix
+                    <div>
+                        <div className=" absolute z-60 top-90 2xl:-right-5 right-1 flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  2xl:w-[346px] w-[310px] h-[56px]">
+                            <div className="Icon flex items-center gap-2">
+                                <span className="relative">
+                                    <Squircle
+                                        height="40"
+                                        width="40"
+                                        color="#151515"
+                                    />
+                                    <Image
+                                        className=" absolute top-[10px] left-[14px]"
+                                        src={netflixPng}
+                                        alt="shield"
+                                        width={13}
+                                        height={13}
+                                    />
+                                </span>
+                                <div>
+                                    <p className="font-inter font-medium text-base leading-[24px] tracking-[-0.5%] text-customDark-0">
+                                        Netflix
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="flex items-center justify-center align-center">
+                                <p className="font-inter font-medium text-2xl leading-[24px] pt-[10px] tracking-[-0.5%] text-customDark-0">
+                                    ******
+                                </p>
+                            </div>
+                            <div className="flex items-center justify-center align-center">
+                                <p className="font-inter font-medium text-base leading-[24px]  tracking-[-0.5%] text-textgray-100">
+                                    3d ago
                                 </p>
                             </div>
                         </div>
-                        <div className="flex items-center justify-center align-center">
-                            <p className="font-inter font-medium text-2xl leading-[24px] pt-[10px] tracking-[-0.5%] text-customDark-0">
-                                ******
-                            </p>
-                        </div>
-                        <div className="flex items-center justify-center align-center">
-                            <p className="font-inter font-medium text-base leading-[24px]  tracking-[-0.5%] text-textgray-100">
-                                3d ago
-                            </p>
-                        </div>
+                        <div className=" absolute z-59 top-91 2xl:-right-[19px] right-[6px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  2xl:w-[343px] w-[307px] h-[56px]"></div>
+                        <div className=" absolute z-58 top-92 2xl:-right-[16px] right-[10px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  2xl:w-[337px] w-[299px] h-[56px]"></div>
                     </div>
-                    <div className=" absolute z-59 top-91 -right-[19px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  w-[343px] h-[56px]"></div>
-                    <div className=" absolute z-58 top-92 -right-[16px] flex items-center justify-between gap px-4 py-2 shadow-xl  bg-white rounded-xl  w-[337px] h-[56px]"></div>
                 </span>
                 <div className="h-[75px] hidden lg:flex w-[275px] absolute bottom-35  left-7 bg-white/70 rounded-xl  gap-3 items-center pl-4 py-4">
                     <div className=" h-10 w-10 rounded-full  bg-[#08291A] absolute -top-4 -left-4 flex justify-center items-center">

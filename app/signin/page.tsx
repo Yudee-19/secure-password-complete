@@ -18,15 +18,18 @@ const Page = () => {
     return (
         <div>
             <div className="flex  h-screen w-screen">
-                <div className=" md:w-[661px] w-full   flex flex-col justify-between items-center md:items-start h-full  bg-white md:pt-21 md:pl-17 px:5  md:pb-11">
-                    <div className="Logo flex gap-3 pt-[100px] md:pt-0 ">
+                <div
+                    className=" md:w-[661px] w-full   flex flex-col justify-between items-center md:items-start h-full  bg-white
+                    md:pb-11"
+                >
+                    <div className="Logo flex gap-3 pt-[100px]  md:pt-21 md:pl-17 px:5 ">
                         <Logo width="35" height="31" />
-                        <div className="justify-start text-customDark-0 md:text-2xl text-xl font-extrabold font-inter">
+                        <div className="justify-start text-customDark-0 md:text-2xl text-lg font-black md:font-extrabold font-inter">
                             Secure Passwords
                         </div>
                     </div>
 
-                    <div className="xs:w-96 w-72  h-72 gap-5  flex flex-col ">
+                    <div className="xs:w-96 w-72  h-auto gap-5  flex flex-col  md:pl-17 px:5 ">
                         <div className="flex flex-col gap-2">
                             <div className="justify-start text-customDark-0 md:text-3xl xs:text2xl text-lg  font-bold font-inter">
                                 Welcome back!
@@ -112,7 +115,7 @@ const Page = () => {
                     </div>
 
                     {/* Version Info */}
-                    <div className="VersionInfo md:block hidden">
+                    <div className="VersionInfo md:block hidden  md:pt-21 md:pl-17 px:5">
                         <span className="text-textgray-100 text-base font-medium font-inter leading-normal">
                             Version{" "}
                         </span>
@@ -122,7 +125,7 @@ const Page = () => {
                     </div>
 
                     {/* Mobile version */}
-                    <div className="flex md:hidden flex-col justify-center items-center gap-4 py-6 border-t-2 border-[#ffffff] ">
+                    <div className="flex md:hidden w-full flex-col justify-center items-center gap-4 py-6 border-t-2 border-[#cccccc] ">
                         <div className="xs:w-96 w-72 text-center justify-start text-textgray-100 text-sm font-medium font-inter leading-tight">
                             It seems you&apos;re on a mobile device. For the
                             best experience, we suggest downloading our <br />

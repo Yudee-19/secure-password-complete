@@ -23,7 +23,7 @@ const Page = () => {
     };
 
     return (
-        <div className="w-screen h-screen  pl-[335px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
+        <div className="w-screen h-screen  2xl:pl-[335px] pl-[270px]  bg-customDark-50 flex flex-col justify-center items-center gap-5 ">
             <Squircle height="100" width="98" insideIcon={<BrokenLock />} />
             <div className="w-[313px] flex justify-center h-[29px] font-inter font-bold text-[24px] leading-[29.05px] tracking-normal text-customWhite">
                 Let&apos;s Get Started

@@ -9,7 +9,7 @@ import NotificationSidebar from "./NotificationSidebar";
 import { useRouter } from "next/navigation";
 import ProfileModal from "./ProfileModal";
 import Logo from "../icons/Logo";
-import Link from 'next/link';
+import Link from "next/link";
 
 const Navbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,12 +52,12 @@ const Navbar = () => {
 
     return (
         <nav className="w-screen h-[82px] fixed top-0 bg-customDark-0 shadow-[0px_-8px_0px_0px_rgba(0,0,0,0.1)] z-50 ">
-            <div className="flex items-center justify-between h-full px-[50px]">
+            <div className="flex items-center justify-between p-8 h-full px-[50px]">
                 {/* Secure Passwords Logo */}
                 <div
                     className=" w-auto h-[32px] flex items-center gap-3 justify-between "
                     onClick={() => {
-                        router.push("/");
+                        router.push("/auth/getstarted");
                     }}
                 >
                     <span className="cursor-pointer">
@@ -70,7 +70,7 @@ const Navbar = () => {
 
                 {/* Search Input Box */}
                 <div
-                    className="w-[681px] h-[50px] bg-customDark-200 rounded-md border-[2px] border-[#555555] flex items-center cursor-pointer "
+                    className="2xl:w-[681px] h-[50px] w-[500px] bg-customDark-200 rounded-md border-[2px] border-[#555555] flex items-center cursor-pointer "
                     onClick={openModal}
                 >
                     <div className=" text-gray-400 pl-6">
@@ -84,7 +84,7 @@ const Navbar = () => {
                     />
                 </div>
 
-                <div className="flex items-center gap-8 ">
+                <div className="flex items-center 2xl:gap-8 xl:gap-4 ">
                     {/* Notification Icon */}
                     <div
                         className="w-[28px] h-[28px]  cursor-pointer"
@@ -96,9 +96,9 @@ const Navbar = () => {
                     {/* Settings Icon */}
                     {/* Agnitro add onlcick  in the below div */}
                     <Link href="/auth/Settings">
-                    <div className="w-[28px] h-[28px] cursor-pointer">
-                        <SettingsIcon />
-                    </div>
+                        <div className="w-[28px] h-[28px] cursor-pointer">
+                            <SettingsIcon />
+                        </div>
                     </Link>
 
                     {/* Profile Section */}

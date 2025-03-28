@@ -23,7 +23,7 @@ const Page = () => {
     };
 
     return (
-        <div className="w-full min-h-screen pl-[335px] pt-[82px] bg-customDark-50 flex flex-col  ">
+        <div className="w-full min-h-screen 2xl:pl-[335px] pl-[270px]  pt-[82px] bg-customDark-50 flex flex-col  ">
             {/* Header */}
             <div className="flex justify-between mt-[57px] px-15">
                 <h1 className="text-white text-[32px] font-extrabold font-Inter">
