@@ -101,16 +101,17 @@ const Page = () => {
             console.log(process.env.NEXT_PUBLIC_BASE_URL);
 
             // Make the API call
-            const response = await fetch(
-                `https://staging-secure-passwords.onrender.com/auth/register`,
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(requestBody),
-                }
-            );
+            const response = await fetch("/api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // Your registration data
+                    master_password: masterPassword,
+                    // Other registration data from localStorage
+                }),
+            });
 
             const data = await response.json();
 

@@ -41,19 +41,16 @@ const Page = () => {
         setError(null);
 
         try {
-            const response = await fetch(
-                "https://staging-secure-passwords.onrender.com/auth/verify-email",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        otp: otp,
-                        email_address: email,
-                    }),
-                }
-            );
+            const response = await fetch("/api/verify-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    otp: otp,
+                    email_address: email,
+                }),
+            });
             const data = await response.json();
 
             if (!response.ok) {

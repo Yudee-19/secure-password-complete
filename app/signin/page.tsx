@@ -32,19 +32,17 @@ const Page = () => {
         setError(null);
 
         try {
-            const response = await fetch(
-                "https://staging-secure-passwords.onrender.com/auth/login",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        login_id: identifier, // This can be username or email
-                        password: password,
-                    }),
-                }
-            );
+            // Using local API route instead of direct fetch to backend
+            const response = await fetch("/api/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    login_id: identifier,
+                    password: password,
+                }),
+            });
             const data = await response.json();
 
             if (!response.ok) {
