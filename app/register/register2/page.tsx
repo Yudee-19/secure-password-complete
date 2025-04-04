@@ -90,16 +90,6 @@ const Page = () => {
                 localStorage.getItem("registration_data") || "{}"
             );
 
-            // Prepare the request body
-            const requestBody = {
-                username: registrationData.username,
-                password: masterPassword,
-                email_address: registrationData.email_address,
-                full_name: registrationData.full_name,
-            };
-            console.log(requestBody);
-            console.log(process.env.NEXT_PUBLIC_BASE_URL);
-
             // Make the API call
             const response = await fetch("/api/register", {
                 method: "POST",
@@ -107,16 +97,18 @@ const Page = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    // Your registration data
-                    master_password: masterPassword,
-                    // Other registration data from localStorage
+                    username: registrationData.username,
+                    password: masterPassword,
+                    email_address: registrationData.email_address,
+                    full_name: registrationData.full_name,
                 }),
             });
 
             const data = await response.json();
 
             if (!response.ok) {
-                throw new Error(data.message || "Registration failed");
+                console.log(data.error);
+                throw new Error(data.error);
             }
 
             // On success, redirect to the next page
