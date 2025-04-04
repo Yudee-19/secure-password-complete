@@ -13,6 +13,30 @@ const PrimaryButton = ({ height, width, text }: ButtonInterface) => {
         </div>
     );
 };
+const PrimaryButtonSignIn = ({
+    height,
+    width,
+    text,
+    enabled,
+}: {
+    height: string;
+    width: string;
+    text: string;
+    enabled?: boolean;
+}) => {
+    return (
+        <div
+            className={` ${
+                enabled ? "bg-[#2ED370] cursor-pointer" : "bg-gray-400"
+            } flex items-center justify-center rounded-sm  `}
+            style={{ width: `${width}px`, height: `${height}px` }}
+        >
+            <p className=" font-inter font-medium text-[16px] leading-[24px] tracking-[-0.5%] text-center text-[#1A1A1A]">
+                {text}
+            </p>
+        </div>
+    );
+};
 const SecondaryButton = ({ height, width, text }: ButtonInterface) => {
     return (
         <div
@@ -48,7 +72,13 @@ const BlackPrimaryButton = ({ height, width, text }: ButtonInterface) => {
                 {text}
             </p>
         </div>
-    );
+    );
 };
 
-export { PrimaryButton, SecondaryButton, RedSecondaryButton , BlackPrimaryButton };
+export {
+    PrimaryButton,
+    SecondaryButton,
+    RedSecondaryButton,
+    BlackPrimaryButton,
+    PrimaryButtonSignIn,
+};

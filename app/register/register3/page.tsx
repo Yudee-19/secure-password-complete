@@ -1,15 +1,74 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
-import { PrimaryButton } from "../../components/Buttons";
+import { PrimaryButton, PrimaryButtonSignIn } from "../../components/Buttons";
 import OtpBox from "../../components/OtpBox";
 import { useRouter } from "next/navigation";
 const Page = () => {
     const router = useRouter();
+    const [otp, setOtp] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        // Get email from localStorage when component mounts
+        try {
+            const registrationData = JSON.parse(
+                localStorage.getItem("registration_data") || "{}"
+            );
+            setEmail(registrationData.email_address || "");
+        } catch (err) {
+            console.error("Error retrieving email from localStorage:", err);
+            router.push("/register");
+        }
+    }, []);
+
     const handleOtpComplete = (otp: string) => {
         console.log("Completed OTP:", otp);
-        // Handle verification here
+        setOtp(otp);
+    };
+
+    const handleVerify = async () => {
+        console.log(otp);
+        if (!otp || otp.length !== 6) {
+            setError("Please enter a valid 6-digit code");
+            return;
+        }
+
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const response = await fetch(
+                "https://staging-secure-passwords.onrender.com/auth/verify-email",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        otp: otp,
+                        email_address: email,
+                    }),
+                }
+            );
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || "Verification failed");
+            }
+            localStorage.removeItem("registration_data");
+            // On successful verification
+            router.push("/auth/getstarted");
+        } catch (err) {
+            setError(
+                err instanceof Error ? err.message : "An unknown error occurred"
+            );
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
@@ -30,7 +89,8 @@ const Page = () => {
                             </div>
                             <div className="justify-start">
                                 <span className="text-textgray-100 text-sm font-medium font-inter leading-tight">
-                                    We sent a 6 digit code to “email-address”.
+                                    We sent a 6 digit code to{" "}
+                                    {email || "your email"}.
                                 </span>
                             </div>
                         </div>
@@ -39,15 +99,16 @@ const Page = () => {
                             <OtpBox onComplete={handleOtpComplete} />
                         </div>
 
-                        <div
-                            onClick={() => {
-                                router.push("/auth/vault");
-                            }}
-                        >
-                            <PrimaryButton
+                        {error && (
+                            <div className="text-red-500 text-sm">{error}</div>
+                        )}
+
+                        <div onClick={handleVerify}>
+                            <PrimaryButtonSignIn
                                 height="40"
                                 width="100%"
-                                text="Verify"
+                                text={isLoading ? "Verifying..." : "Verify"}
+                                enabled={!!(otp && otp.length === 6)}
                             />
                         </div>
                     </div>

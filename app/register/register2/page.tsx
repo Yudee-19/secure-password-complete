@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
 import { useRouter } from "next/navigation";
-import { PrimaryButton } from "../../components/Buttons";
+import { PrimaryButton, PrimaryButtonSignIn } from "../../components/Buttons";
 import EyeIcon from "../../icons/EyeIcon";
 import PasswordStrengthIndicator from "../../components/PasswordStrengthIndicator";
+import { Stream } from "stream";
 
 type PasswordStrengthType = {
     strength: "weakest" | "weak" | "strong" | "strongest";
@@ -15,11 +16,15 @@ type PasswordStrengthType = {
 const Page = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [masterPassword, setMasterPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [passwordStrength, setPasswordStrength] =
         useState<PasswordStrengthType>({
             strength: "weakest",
             color: "bg-red-500",
         });
+
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
 
     // Function to check password strength
     const checkPasswordStrength = (password: string): PasswordStrengthType => {
@@ -61,6 +66,69 @@ const Page = () => {
     };
 
     const router = useRouter();
+    const handleSignUp = async () => {
+        if (
+            masterPassword !== confirmPassword ||
+            (masterPassword === "" && confirmPassword === "")
+        ) {
+            setError("Empty Passwords or Passwords do not match! ");
+            return;
+        }
+        if (
+            passwordStrength.strength == "weak" ||
+            passwordStrength.strength == "weakest"
+        ) {
+            setError("Please choose strong Password!! ");
+            return;
+        }
+
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            // Retrieve stored registration data
+            const registrationData = JSON.parse(
+                localStorage.getItem("registration_data") || "{}"
+            );
+
+            // Prepare the request body
+            const requestBody = {
+                username: registrationData.username,
+                password: masterPassword,
+                email_address: registrationData.email_address,
+                full_name: registrationData.full_name,
+            };
+            console.log(requestBody);
+            console.log(process.env.NEXT_PUBLIC_BASE_URL);
+
+            // Make the API call
+            const response = await fetch(
+                `https://staging-secure-passwords.onrender.com/auth/register`,
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(requestBody),
+                }
+            );
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || "Registration failed");
+            }
+
+            // On success, redirect to the next page
+            router.push("/register/register3");
+        } catch (err) {
+            setError(
+                err instanceof Error ? err.message : "An unknown error occurred"
+            );
+        } finally {
+            setIsLoading(false);
+        }
+    };
     return (
         <div>
             <div className="flex h-screen w-screen">
@@ -114,6 +182,10 @@ const Page = () => {
                                             showPassword ? "text" : "password"
                                         }
                                         placeholder="Confirm Master Password"
+                                        value={confirmPassword}
+                                        onChange={(e) =>
+                                            setConfirmPassword(e.target.value)
+                                        }
                                     />
                                     <span
                                         className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2"
@@ -123,17 +195,19 @@ const Page = () => {
                                     </span>
                                 </label>
                             </div>
+                            {/* Error message */}
+                            {error && (
+                                <p className="text-red-500 text-sm">{error}</p>
+                            )}
                         </div>
 
-                        <div
-                            onClick={() => {
-                                router.push("/register/register3");
-                            }}
-                        >
-                            <PrimaryButton
+                        {/* Sign up button */}
+                        <div onClick={handleSignUp}>
+                            <PrimaryButtonSignIn
                                 height="40"
                                 width="100%"
-                                text="Sign up"
+                                text={isLoading ? "Signing up..." : "Sign up"}
+                                enabled={!!(masterPassword && confirmPassword)}
                             />
                         </div>
                     </div>

@@ -58,7 +58,10 @@ const Page = () => {
                                 />
                             </label>
                         </div>
-                        <div id="Password-field" className="relative">
+                        <div
+                            id="Password-field"
+                            className="relative xs:w-96 w-72 h-12"
+                        >
                             <label htmlFor=" password ">
                                 <input
                                     className="xs:w-96 w-72 h-12  rounded border-2 border-stone-300 outline-none text-textgray-100 placeholder:text-textgray-100 outline-stone-300 overflow-hidden px-4"
@@ -67,14 +70,14 @@ const Page = () => {
                                     placeholder="Master Password"
                                 />
                                 <span
-                                    className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2"
+                                    className="cursor-pointer absolute right-4 top-2/6 "
                                     onClick={togglePasswordVisibility}
                                 >
                                     <EyeIcon />
                                 </span>
                             </label>
                         </div>
-                        <div className=" flex justify-between h-5">
+                        <div className=" flex justify-between xs:w-96 w-72 h-5">
                             <div className="flex items-center gap-1">
                                 <label
                                     htmlFor="remember"
@@ -101,7 +104,7 @@ const Page = () => {
                             </span>
                         </div>
                         <div
-                            className="cursor-pointer"
+                            className="cursor-pointer xs:w-96 w-72"
                             onClick={() => {
                                 router.push("/auth/vault");
                             }}
