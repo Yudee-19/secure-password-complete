@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ShieldIcon from "../components/ShieldIcon";
 import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
-import { PrimaryButton, PrimaryButtonSignIn } from "../components/Buttons";
+import { PrimaryButtonSignIn } from "../components/Buttons";
 import EyeIcon from "../icons/EyeIcon";
 import AppleStore from "../icons/AppleStore";
 
