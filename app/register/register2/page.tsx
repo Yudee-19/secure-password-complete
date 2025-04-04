@@ -201,7 +201,7 @@ const Page = () => {
                         </div>
 
                         {/* Sign up button */}
-                        <div onClick={handleSignUp}>
+                        <div className="xs:w-96 w-72" onClick={handleSignUp}>
                             <PrimaryButtonSignIn
                                 height="40"
                                 width="100%"

@@ -3,18 +3,78 @@ import React, { useState } from "react";
 import ShieldIcon from "../components/ShieldIcon";
 import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
-import { PrimaryButton } from "../components/Buttons";
+import { PrimaryButton, PrimaryButtonSignIn } from "../components/Buttons";
 import EyeIcon from "../icons/EyeIcon";
 import AppleStore from "../icons/AppleStore";
 
 const Page = () => {
+    const router = useRouter();
     const [showPassword, setShowPassword] = useState(false);
+    const [identifier, setIdentifier] = useState(""); // Username or email
+    const [password, setPassword] = useState("");
+    const [rememberMe, setRememberMe] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
     // Toggle password visibility
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
 
-    const router = useRouter();
+    const handleSignIn = async () => {
+        // Basic validation
+        if (!identifier || !password) {
+            setError("Username/Email and password are required");
+            return;
+        }
+
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const response = await fetch(
+                "https://staging-secure-passwords.onrender.com/auth/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        login_id: identifier, // This can be username or email
+                        password: password,
+                    }),
+                }
+            );
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || "Login failed");
+            }
+
+            // Store authentication token if returned
+            if (data.message === "Login successful") {
+                router.push("/auth/vault");
+                // Check if MFA is required
+                // if (data.mfaEnabled) {
+                //     // If MFA is enabled, redirect to MFA verification page
+                //     localStorage.setItem("user_login_id", loginId);
+                //     router.push("/mfa-verification");
+                // } else {
+                //     // If MFA is not enabled, proceed to vault
+                //     router.push("/auth/vault");
+                // }
+            } else {
+                throw new Error(data.message || "Login failed");
+            }
+        } catch (err) {
+            setError(
+                err instanceof Error ? err.message : "An unknown error occurred"
+            );
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <div>
             <div className="flex  h-screen w-screen">
@@ -55,6 +115,10 @@ const Page = () => {
                                     id="id"
                                     type="text"
                                     placeholder="Username or Email"
+                                    value={identifier}
+                                    onChange={(e) =>
+                                        setIdentifier(e.target.value)
+                                    }
                                 />
                             </label>
                         </div>
@@ -68,6 +132,10 @@ const Page = () => {
                                     id="password"
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Master Password"
+                                    value={password}
+                                    onChange={(e) =>
+                                        setPassword(e.target.value)
+                                    }
                                 />
                                 <span
                                     className="cursor-pointer absolute right-4 top-2/6 "
@@ -86,6 +154,10 @@ const Page = () => {
                                     <input
                                         type="checkbox"
                                         className=" border-stone-300  appearance-none w-4 h-4 border-2  rounded-sm checked:bg-[#0F6FFD] checked:border-[#0F6FFD] relative checked:after:content-['✓'] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:text-white checked:after:text-sm checked:after:transform checked:after:-translate-x-1/2 checked:after:-translate-y-1/2"
+                                        checked={rememberMe}
+                                        onChange={(e) =>
+                                            setRememberMe(e.target.checked)
+                                        }
                                     />
                                 </label>
                                 <span className="text-textgray-100   text-sm font-medium font-inter leading-tight">
@@ -103,16 +175,15 @@ const Page = () => {
                                 </div>
                             </span>
                         </div>
-                        <div
-                            className="cursor-pointer xs:w-96 w-72"
-                            onClick={() => {
-                                router.push("/auth/vault");
-                            }}
-                        >
-                            <PrimaryButton
+                        {error && (
+                            <div className="text-red-500 text-sm">{error}</div>
+                        )}
+                        <div className=" xs:w-96 w-72" onClick={handleSignIn}>
+                            <PrimaryButtonSignIn
                                 height="40"
                                 width="100%"
-                                text="Sign in"
+                                text={isLoading ? "Signing in..." : "Sign in"}
+                                enabled={!!(identifier && password)}
                             />
                         </div>
                     </div>
