@@ -3,10 +3,9 @@ import React, { useState, useEffect } from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
 import { useRouter } from "next/navigation";
-import { PrimaryButton, PrimaryButtonSignIn } from "../../components/Buttons";
+import { PrimaryButtonSignIn } from "../../components/Buttons";
 import EyeIcon from "../../icons/EyeIcon";
 import PasswordStrengthIndicator from "../../components/PasswordStrengthIndicator";
-import { Stream } from "stream";
 
 type PasswordStrengthType = {
     strength: "weakest" | "weak" | "strong" | "strongest";

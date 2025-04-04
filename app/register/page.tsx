@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ShieldIcon from "../components/ShieldIcon";
 import Logo from "../icons/Logo";
 import { useRouter } from "next/navigation";
-import { PrimaryButton, PrimaryButtonSignIn } from "../components/Buttons";
+import { PrimaryButtonSignIn } from "../components/Buttons";
 import AppleStore from "../icons/AppleStore";
 const Page = () => {
     const router = useRouter();
@@ -42,7 +42,7 @@ const Page = () => {
             );
             router.push("/register/register2");
         } catch (err) {
-            setError("An error occurred. Please try again.");
+            setError(`An error occurred. Please try again. ${err}`);
         } finally {
             setIsLoading(false);
         }

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ShieldIcon from "../../components/ShieldIcon";
 import Logo from "../../icons/Logo";
-import { PrimaryButton, PrimaryButtonSignIn } from "../../components/Buttons";
+import { PrimaryButtonSignIn } from "../../components/Buttons";
 import OtpBox from "../../components/OtpBox";
 import { useRouter } from "next/navigation";
 const Page = () => {
