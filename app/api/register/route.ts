@@ -17,7 +17,8 @@ export async function POST(request: Request) {
 
         const data = await response.json();
         return NextResponse.json(data, { status: response.status });
-    } catch (error) {
+    } catch (_error) {
+        console.error("Register API error:", _error);
         return NextResponse.json(
             { message: "Registration failed" },
             { status: 500 }
